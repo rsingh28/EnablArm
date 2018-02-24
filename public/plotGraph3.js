@@ -1,22 +1,19 @@
-window.onload = plot1();
+window.onload = plot3();
 
-// Testing nested function
-// testCall();
-
-function plot1() {
+function plot3() {
 
 var dps = []; // dataPoints
-var chart2 = new CanvasJS.Chart("chartContainer1", {
+var chart3 = new CanvasJS.Chart("chartContainer3", {
 	theme: "light2",
 	title :{
-		text: "Accelerometer"
+		text: "Relative Orientation"
 	},
 	axisY: {
 		includeZero: false
 	},      
 	data: [{
 		type: "line",
-		color: "#1d47e0",
+		color: "#bf1c16",
 		dataPoints: dps
 	}]
 });
@@ -43,7 +40,7 @@ var updateChart = function (count) {
 		dps.shift();
 	}
 
-	chart2.render();
+	chart3.render();
 };
 
 updateChart(dataLength);

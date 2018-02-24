@@ -4,14 +4,16 @@ function plot2() {
 
 var dps = []; // dataPoints
 var chart2 = new CanvasJS.Chart("chartContainer2", {
+	theme: "light2",
 	title :{
-		text: "Some other Arm Parameter Plot"
+		text: "Gyrometer"
 	},
 	axisY: {
 		includeZero: false
 	},      
 	data: [{
 		type: "line",
+		color: "#b55fb3",
 		dataPoints: dps
 	}]
 });

@@ -6,18 +6,8 @@ Myo.on('fist', function(){
     console.log('fist pose start');
 });
 
-// function acc_reading(){
 
-// 	//Myo.zeroOrientation(); // Sets the current location as the zero orientation
-// 	Myo.on('accelerometer', function(data){
-// 		console.log(data.z);
-// 		//return data.z;
-
-// 		//plot1();
-// })
-
-// }
-
+function acc_reading(){
 Myo.on('accelerometer', function(data){
 		//console.log(data.z);
 		//return data.z;
@@ -35,3 +25,6 @@ Myo.on('accelerometer', function(data){
 
 		demo();
 	})
+}
+
+//acc_reading();
