@@ -1,4 +1,4 @@
-window.onload = plot1();
+//window.onload = plot1();
 
 // Testing nested function
 // testCall();
@@ -21,7 +21,7 @@ var chart2 = new CanvasJS.Chart("chartContainer1", {
 
 var xVal = 0;
 var yVal = 100; 
-var updateInterval = 6000;
+var updateInterval = 1000;
 var dataLength = 10; // number of dataPoints visible at any point
 
 var updateChart = function (count) {
@@ -45,6 +45,6 @@ var updateChart = function (count) {
 };
 
 updateChart(dataLength);
-setInterval(function(){updateChart()}, updateInterval);
+//setInterval(function(){updateChart()}, updateInterval);
 
 }
