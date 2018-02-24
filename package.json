@@ -1,0 +1,23 @@
+{
+  "name": "hackthevalley2018",
+  "version": "1.0.0",
+  "description": "Project for Hack the Valley",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsingh28/HackTheValley2018.git"
+  },
+  "author": "Rashmeet Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsingh28/HackTheValley2018/issues"
+  },
+  "homepage": "https://github.com/rsingh28/HackTheValley2018#readme"
+}
