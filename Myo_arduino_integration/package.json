@@ -1,0 +1,17 @@
+{
+  "name": "myo_arduino_integration",
+  "version": "1.0.0",
+  "description": "Integrating the prosthetic arm with Myo Armband",
+  "main": "myoScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rashmeet Singh",
+  "license": "ISC",
+  "dependencies": {
+    "myo": "^3.0.0",
+    "require": "^2.4.20",
+    "serialport": "^6.0.5",
+    "ws": "^4.1.0"
+  }
+}
