@@ -1,9 +1,29 @@
-window.onload = plot1();
+window.onload = plot1(0);
 
 // Testing nested function
 // testCall();
+Myo.connect();
 
-function plot1() {
+Myo.on('accelerometer', function(data){
+		console.log(data.z);
+
+		function sleep(ms) {
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+
+		async function demo() {
+			//console.log('Taking a break...');
+			await sleep(4000);
+			//console.log('Four second later');
+			var val = ( (data.x+data.y+data.z)/3 ) * 10;
+			plot1(val);
+		}
+
+		demo();
+
+});
+
+function plot1(y_val) {
 
 var dps = []; // dataPoints
 var chart2 = new CanvasJS.Chart("chartContainer1", {
@@ -22,16 +42,16 @@ var chart2 = new CanvasJS.Chart("chartContainer1", {
 });
 
 var xVal = 0;
-var yVal = 100; 
-var updateInterval = 500;
-var dataLength = 10; // number of dataPoints visible at any point
+var yVal = 20; 
+var updateInterval = 1000;
+var dataLength = 5; // number of dataPoints visible at any point
 
 var updateChart = function (count) {
 
 	count = count || 1;
 
 	for (var j = 0; j < count; j++) {
-		yVal = yVal +  Math.round(5 + Math.random() *(-5-5));
+		yVal = y_val;
 		dps.push({
 			x: xVal,
 			y: yVal
@@ -47,6 +67,6 @@ var updateChart = function (count) {
 };
 
 updateChart(dataLength);
-setInterval(function(){updateChart()}, updateInterval);
+//setInterval(function(){updateChart()}, updateInterval);
 
 }

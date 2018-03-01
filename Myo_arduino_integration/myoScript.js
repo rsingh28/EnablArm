@@ -3,7 +3,7 @@ var SerialPort = require('serialport');
 
 Myo.connect('', require('ws'));
 
-var port = new SerialPort('/dev/ttyUSB0', {
+var port = new SerialPort('/dev/cu.usbserial-A703OQYQ', {
   baudRate: 9600
 });
 //console.log(port);
@@ -18,8 +18,8 @@ Myo.on('fist', function(){
 
 // Grab Key Gesture
 
-Myo.on('fingers_spread', function(){
-	console.log('Finger Spread Event Triggered!');
+Myo.on('wave_out', function(){
+	console.log('Wave Out Event Triggered!');
 	this.vibrate();
 	port.write('2');
 });
