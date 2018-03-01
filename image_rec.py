@@ -1,7 +1,6 @@
 # SmartArm || UoftHacks 2018 Submission
 # Uses Microsoft Cognitive Services API
-# Author: Choudhry, Hamayal
-#     Khan, Samin
+# Author: Hamayal Choudhry, Rashmeet Singh 
 # Date: January 21, 2018            
 
 import httplib, urllib, base64, json
